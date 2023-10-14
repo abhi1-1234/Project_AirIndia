@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="SuiteAirIndia">
+	<listeners>
+		<listener class-name="extendReport.ExtentTestNGIReporterListener"></listener>
+	</listeners>
+	
+  <test thread-count="5" name="TestAirIndia in Chrome">
+	  <parameter name="Browser" value="Chrome"></parameter>
+    <classes>
+	  <class name="testPack.Calender_Textbox"/>
+      <class name="testPack.From_and_To_Textbox"/> 
+      <class name="testPack.Passengers_Textbox"/>
+    </classes>
+  </test> <!-- TestAirIndia -->
+  
+  <test thread-count="5" name="TestAirIndia in Firefox">
+	  <parameter name="Browser" value="Firefox"></parameter>
+    <classes>
+      <class name="testPack.From_and_To_Textbox"/> 
+      <class name="testPack.Passengers_Textbox"/>
+      <class name="testPack.Calender_Textbox"/>
+    </classes>
+  </test> <!-- TestAirIndia -->
+</suite> <!-- SuiteAirIndia -->
